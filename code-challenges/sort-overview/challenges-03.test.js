@@ -30,15 +30,11 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
- arr.sort((a, b) => {
+ arr.sort((a, b) => b-a);
    if(a>b){
-     return 1;
-   } else if (a < b){
-     return -1;
+     return arr;
    
 
-   }
- })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,21 +48,12 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  helperArray(arr);
+  arr.sort();
   return arr;
+
 };
 
-const helperArray = (array0 => {
-  array.sort((a, b) => {
-    if(a >b){
-      return 1;
-    } else if (a <b){
-      return -1;
-    } else {
-      return 0;
-    }
-  });
-};
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -75,15 +62,10 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = (arr) => {
-  // Solution code here...
+arr.sort((a,b) => a.lenght-b.length);
+return arr;
+
 };
-let chfourhelper = (array) => {
-  array.sort((a, b) => {
-    a = a.length;
-    b = b.length;
-    return a - b;
-  });
-})
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
 
