@@ -21,7 +21,9 @@ const changeAllClassNames = () => {
   $('li').addClass('fruit');
 };
 
-/* ------------------------------------------------------------------------------------------------
+/* 
+
+//added------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
 Write a function named sortBackwards that takes in an array of numbers and returns the same array, with the numbers sorted, highest to smallest.
@@ -63,6 +65,8 @@ const helperArray = (array) => {
     }
   });
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
