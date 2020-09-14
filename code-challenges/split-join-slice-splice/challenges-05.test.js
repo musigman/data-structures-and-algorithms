@@ -37,7 +37,7 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const templateWithJQuery = () => {
-  const Template = $('#template').html();
+  const template = $('#template').html();
   starWarsPeople.forEach(value => {
     const html = $(`<section>${template}</section>`);
     // const $newSection = $(template);
@@ -80,11 +80,11 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   let result = [];
-for (let i = 0; i < arr.length); i++) {
-  let char = arr.charAt(i);
-  result.push(char);
-}
-return result;
+  for (let i = 0; i < arr.length; i++) {
+    let char = arr.charAt(i);
+    result.push(char);
+  }
+  return result;
 };
 
 
@@ -135,7 +135,7 @@ const listFoods = (recipe) => {
     let secondSpace = ingredient.indexOf(' ', (ingredient.indexOf(' ') + 1));
     result.push(ingredient.slice(secondSpace + 1));
   });
-    return result;
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
