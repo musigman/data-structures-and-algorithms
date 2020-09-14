@@ -37,9 +37,9 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const templateWithJQuery = () => {
-  const myTemplate = $('#template').html();
+  const Template = $('#template').html();
   starWarsPeople.forEach(value => {
-    const html = $(`<section>${myTemplate}</section>`);
+    const html = $(`<section>${template}</section>`);
     // const $newSection = $(template);
     html.find('h2').text(value.name);
     html.find('h3').text(value.height);
@@ -79,12 +79,12 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  let array = [];
-for (var i = 0; i < arr.length); i++){
-  let item = arr[i];
-  array.push(item);
+  let result = [];
+for (let i = 0; i < arr.length); i++) {
+  let char = arr.charAt(i);
+  result.push(char);
 }
-return array;
+return result;
 };
 
 
@@ -130,17 +130,12 @@ const gruffaloCrumble = {
 
 
 const listFoods = (recipe) => {
-  let tempArr = [];
   let result = [];
-  for (val i = 0; i < gruffaloCrumble.ingredients.length; i++) {
-    tempArr.push(gruffaloCrumble.ingredients[i];
-    for (var j = 0; j < tempArr.length; j++) {
-      var push = tempArr.slice[0, 3];
-      tempArr = [];
-    }
-      result.push(push);
-  }
-  return result;
+  recipe.ingredients.forEach(ingredient => {
+    let secondSpace = ingredient.indexOf(' ', (ingredient.indexOf(' ') + 1));
+    result.push(ingredient.slice(secondSpace + 1));
+  });
+    return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
