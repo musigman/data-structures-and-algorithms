@@ -20,7 +20,7 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const addTea = () => {
-  const template = $('ul').html();
+  // const template = $('ul').html();
   let content = '<li>tea</li>';
   $('ul').append(content);
 };
